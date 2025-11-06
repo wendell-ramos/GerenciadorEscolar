@@ -1,0 +1,51 @@
+﻿<Window x:Class="GerenciamentoEscolarAPP.Views.PainelAluno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Painel do Aluno"
+        Height="400" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FFF8F8F8" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Nome do Aluno -->
+        <TextBlock x:Name="lblNomeAluno"
+                   Text="Bem-vindo(a)!"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="Black"
+                   Margin="0,10,0,10"
+                   HorizontalAlignment="Center"
+                   Grid.Row="0"/>
+
+        <!-- Tabela de Notas -->
+        <DataGrid x:Name="dgNotas"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  HeadersVisibility="Column"
+                  Margin="0,10,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Disciplina" Binding="{Binding Disciplina}" Width="*"/>
+                <DataGridTextColumn Header="Nota" Binding="{Binding Nota}" Width="Auto"/>
+                <DataGridTextColumn Header="Professor" Binding="{Binding Professor}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botão de Sair -->
+        <Button Grid.Row="2"
+                Content="Sair"
+                Background="#FF303030"
+                Foreground="White"
+                FontWeight="Bold"
+                Width="100"
+                Height="35"
+                HorizontalAlignment="Center"
+                Margin="0,10,0,10"
+                Click="BtnSair_Click"/>
+    </Grid>
+</Window>

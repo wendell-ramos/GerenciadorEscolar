@@ -1,0 +1,30 @@
+﻿<Window x:Class="GerenciamentoEscolarAPP.Views.Cadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cadastro - Gerenciamento Escolar" Height="450" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Cadastro de Usuário" FontSize="22" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Nome:"/>
+            <TextBox x:Name="txtNome" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Email:"/>
+            <TextBox x:Name="txtEmail" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Senha:"/>
+            <PasswordBox x:Name="txtSenha" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Tipo de Usuário:"/>
+            <ComboBox x:Name="cmbTipo" Margin="0,5,0,20">
+                <ComboBoxItem Content="Aluno"/>
+                <ComboBoxItem Content="Professor"/>
+            </ComboBox>
+
+            <Button Content="Cadastrar" Click="BtnCadastrar_Click" Height="35" Background="#0078D7" Foreground="White"/>
+            <Button Content="Voltar" Click="BtnVoltar_Click" Margin="0,10,0,0"/>
+
+            <TextBlock x:Name="txtMensagem" Foreground="Green" Margin="0,15,0,0" TextAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
